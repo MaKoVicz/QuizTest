@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--************************Main Layout************************-->
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPractice"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.astuetz.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00000000"
+            app:pstsIndicatorColor="#FFFFFF"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsShouldExpand="true"
+            app:pstsTextAllCaps="false" />
+    </RelativeLayout>
+
+    <!--************************Nav Drawer************************-->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <!--************************Profile Background************************-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/profileBackgroundImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/profileBackground"
+                android:src="@drawable/profilebg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/profileBackgroundImageView"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userName"
+                    android:textColor="@color/colorProfileTextView"
+                    android:textSize="@dimen/userName"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/codeNumber"
+                    android:textColor="@color/colorProfileTextView"
+                    android:textSize="@dimen/codeNumber" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--************************Item************************-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--*******Sound setting header******-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/nav_item_header_color"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/soundSettingDescription"
+                    android:src="@drawable/ic_vector_sound" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/soundTextView"
+                    android:textColor="@color/colorTextView"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--*******Sound setting items******-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical">
+
+                <!--*******Background Music******-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp">
+
+                    <Switch
+                        android:id="@+id/backgroundMusicSwitch"
+                        style="@style/AppTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/backgroundMusicTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:text="@string/backgroundMusicTextView"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+                <!--*******Sound Effect******-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp">
+
+                    <Switch
+                        android:id="@+id/soundEffectSwitch"
+                        style="@style/AppTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/soundEffectTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingEnd="12dp"
+                        android:paddingStart="10dp"
+                        android:text="@string/soundEffectTextView"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--*******Answer view setting header******-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/nav_item_header_color"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/viewSettingDescription"
+                    android:src="@drawable/ic_vector_viewsetting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/viewSettingTextView"
+                    android:textColor="@color/colorTextView"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--*******Answer view setting items******-->
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:checkedButton="@+id/smallViewRadioButton"
+                android:orientation="vertical"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp">
+
+                <RadioButton
+                    android:id="@+id/smallViewRadioButton"
+                    style="@style/AppTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/rdbSmallView"
+                    android:textColor="@color/colorBlack" />
+
+                <RadioButton
+                    android:id="@+id/largeViewRadioButton"
+                    style="@style/AppTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/rdbLargeView"
+                    android:textColor="@color/colorBlack" />
+            </RadioGroup>
+
+            <!--*******Other setting header******-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/nav_item_header_color"
+                android:orientation="horizontal"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/otherSettingDescription"
+                    android:src="@drawable/ic_vector_othersetting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/otherSettingTextView"
+                    android:textColor="@color/colorTextView"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--*******Other setting items******-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:paddingEnd="12dp"
+                android:paddingStart="12dp">
+
+                <!--*******About******-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/aboutViewContainer"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/aboutImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/aboutImageDescription"
+                        android:src="@drawable/ic_vector_about" />
+
+                    <TextView
+                        android:id="@+id/aboutTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/aboutTextView"
+                        android:textColor="@color/nav_otherSetting_color" />
+                </LinearLayout>
+
+                <!--*******Exit******-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/exitViewContainer"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/exitImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/exitImageDescription"
+                        android:src="@drawable/ic_vector_exit" />
+
+                    <TextView
+                        android:id="@+id/exitTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/exitTextView"
+                        android:textColor="@color/nav_otherSetting_color" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

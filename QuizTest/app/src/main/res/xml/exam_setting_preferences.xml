@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:entries="@array/difficulty_list"
+        android:entryValues="@array/difficulty_list"
+        android:key="pref_difficulty_list"
+        android:title="@string/difficultySetting"
+        android:summary="@string/difficultySettingDescription"
+        android:persistent="true"
+        android:defaultValue="Medium"/>
+
+    <ListPreference
+        android:entries="@array/question_amount_list"
+        android:entryValues="@array/question_amount_list"
+        android:key="pref_questionAmount_list"
+        android:title="@string/questionAmountSetting"
+        android:summary="@string/questionAmountSettingDescription"
+        android:persistent="true"
+        android:defaultValue="5"/>
+
+    <ListPreference
+        android:entries="@array/exam_time_list"
+        android:entryValues="@array/exam_time_list"
+        android:key="pref_examTime_list"
+        android:title="@string/examTimeSetting"
+        android:summary="@string/examTimeSettingDescription"
+        android:persistent="true"
+        android:defaultValue="5"/>
+</PreferenceScreen>

@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="viewMargin">80dp</dimen>
+    <dimen name="labelTextSize">40sp</dimen>
+    <dimen name="quizTextSize">80sp</dimen>
+    <dimen name="userName">20sp</dimen>
+    <dimen name="codeNumber">15sp</dimen>
+    <dimen name="answerTextDimension">25sp</dimen>
+</resources>

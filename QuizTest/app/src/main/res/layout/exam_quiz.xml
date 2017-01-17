@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/practice_quiz_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    android:paddingBottom="3dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="3dp">
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:textColor="@color/colorTextView"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/questionTextViewExam"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_weight="6"
+        android:background="#FFFFFF"
+        android:maxLines="20"
+        android:singleLine="false"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:id="@+id/answerOptionContainerExam"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/answerALayoutExam"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/answerA"
+                android:gravity="center"
+                android:text="@string/answerA"
+                android:textColor="@color/colorTextView"
+                android:textSize="@dimen/answerTextDimension" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerBLayoutExam"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/answerB"
+                android:gravity="center"
+                android:text="@string/answerB"
+                android:textColor="@color/colorTextView"
+                android:textSize="@dimen/answerTextDimension" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerCLayoutExam"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/answerC"
+                android:gravity="center"
+                android:text="@string/answerC"
+                android:textColor="@color/colorTextView"
+                android:textSize="@dimen/answerTextDimension" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answerDLayoutExam"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@color/answerD"
+                android:gravity="center"
+                android:text="@string/answerD"
+                android:textColor="@color/colorTextView"
+                android:textSize="@dimen/answerTextDimension" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

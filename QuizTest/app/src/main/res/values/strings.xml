@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">QuizTest</string>
+    <string name="practiceTextView">PRACTICE</string>
+    <string name="examTextView">EXAM</string>
+    <string name="interactiveTextView">INTERACTIVE</string>
+    <string name="startButton">START</string>
+    <string name="quizTextView">{QUIZ}</string>
+    <string name="userName">Trần Quốc Huy</string>
+    <string name="codeNumber">Code number: 2131478</string>
+    <string name="profileBackground">Profile background image</string>
+    <string name="soundTextView">Sound Setting</string>
+    <string name="soundSettingDescription">Sound setting</string>
+    <string name="viewSettingTextView">Answer View Setting</string>
+    <string name="viewSettingDescription">Answer view setting</string>
+    <string name="otherSettingTextView">Others</string>
+    <string name="otherSettingDescription">Other setting</string>
+    <string name="backgroundMusicTextView">Background Music</string>
+    <string name="soundEffectTextView">Sound Effect</string>
+    <string name="rdbSmallView">Small View</string>
+    <string name="rdbLargeView">Large View</string>
+    <string name="aboutTextView">About</string>
+    <string name="exitTextView">Exit</string>
+    <string name="aboutImageDescription">Information about the application</string>
+    <string name="exitImageDescription">Exit the application</string>
+    <string name="answerA">A</string>
+    <string name="answerB">B</string>
+    <string name="answerC">C</string>
+    <string name="answerD">D</string>
+    <string name="beginButton">BEGIN</string>
+    <string name="difficultySetting">Difficulty</string>
+    <string name="difficultySettingDescription">Difficulty of the quiz</string>
+    <string name="questionAmountSetting">Question Amount</string>
+    <string name="questionAmountSettingDescription">The number of questions in the quiz</string>
+    <string name="examTimeSetting">Exam Time</string>
+    <string name="examTimeSettingDescription">The amount of time to finish the quiz</string>
+</resources>

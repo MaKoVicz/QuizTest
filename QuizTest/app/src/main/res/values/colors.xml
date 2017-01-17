@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#00c4b2</color>
+    <color name="colorPractice">#2196F3</color>
+    <color name="colorPracticeTransparent">#002196F3</color>
+    <color name="colorExam">#F44336</color>
+    <color name="colorExamTransparent">#00F44336</color>
+    <color name="colorInteractive">#64DD17</color>
+    <color name="colorInteractiveTransparent">#0064DD17</color>
+    <color name="colorTextView">#FFFFFF</color>
+    <color name="colorProfileTextView">#F5F5F5</color>
+    <color name="nav_item_header_color">#607D8B</color>
+    <color name="colorBlack">#000000</color>
+    <color name="nav_otherSetting_color">#6200EA</color>
+    <color name="answerA">#9C27B0</color>
+    <color name="answerB">#2196F3</color>
+    <color name="answerC">#76FF03</color>
+    <color name="answerD">#FF5722</color>
+    <color name="colorPreview">#795548</color>
+    <color name="colorPreviewTransparent">#00795548</color>
+    <color name="unansweredColor">#9E9E9E</color>
+    <color name="foreground_material_light_1">#ffffff</color>
+</resources>

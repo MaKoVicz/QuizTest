@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/previewMainLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:layout_weight="7"
+            android:background="@color/colorTextView">
+
+            <TextView
+                android:id="@+id/correctColorSwatches"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/incorrectColorSwatches"
+                android:layout_marginTop="50dp"
+                android:background="@color/colorInteractive" />
+
+            <TextView
+                android:id="@+id/correctPercentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/correctColorSwatches"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@+id/correctColorSwatches"
+                android:text="Correct"
+                android:textColor="@color/colorInteractive"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/incorrectColorSwatches"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/correctColorSwatches"
+                android:layout_marginEnd="137dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorExam" />
+
+            <TextView
+                android:id="@+id/incorrectPercentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/correctPercentTextView"
+                android:layout_alignTop="@+id/incorrectColorSwatches"
+                android:text="Incorrect"
+                android:textColor="@color/colorExam"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/unansweredColorSwatches"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignStart="@+id/incorrectColorSwatches"
+                android:layout_below="@+id/incorrectColorSwatches"
+                android:layout_marginTop="15dp"
+                android:background="@color/unansweredColor" />
+
+            <TextView
+                android:id="@+id/unansweredPercentTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/incorrectPercentTextView"
+                android:layout_alignTop="@+id/unansweredColorSwatches"
+                android:text="Unanswered"
+                android:textColor="@color/unansweredColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/previewButton"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/unansweredPercentTextView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="130dp"
+                android:background="@color/colorPreview"
+                android:text="PREVIEW"
+                android:textColor="@color/colorTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RECENT RECORD"
+                android:textStyle="bold"
+                android:textColor="@color/colorInteractive"
+                android:layout_marginStart="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:textSize="18sp"/>
+
+            <LinearLayout
+                android:id="@+id/chartLayout"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.github.mikephil.charting.charts.PieChart>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorTextView"
+            android:layout_weight="1"
+            android:id="@+id/recordContainer1"
+            android:visibility="invisible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/difficultyRecordTextView1"
+                    android:text="Hard"
+                    android:textSize="25sp"
+                    android:textColor="@color/answerD"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datetimeRecordTextView1"
+                    android:layout_marginStart="6dp"
+                    android:textSize="20sp"
+                    android:text="Date: 4/10/2016"
+                    android:layout_below="@+id/difficultyRecordTextView1"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questionAndTimeRecordTextView1"
+                    android:text="15 Questions / 5 Minutes"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="Correct: 60%"
+                    android:textSize="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/correctRecordTextView1" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorTextView"
+            android:visibility="invisible"
+            android:id="@+id/recordContainer2"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/difficultyRecordTextView2"
+                    android:text="Hard"
+                    android:textSize="25sp"
+                    android:textColor="@color/answerD"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datetimeRecordTextView2"
+                    android:layout_marginStart="6dp"
+                    android:textSize="20sp"
+                    android:text="Date: 4/10/2016"
+                    android:layout_below="@+id/difficultyRecordTextView2"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questionAndTimeRecordTextView2"
+                    android:text="15 Questions / 5 Minutes"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="Correct: 60%"
+                    android:textSize="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/correctRecordTextView2" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/colorTextView"
+            android:visibility="invisible"
+            android:id="@+id/recordContainer3"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/difficultyRecordTextView3"
+                    android:text="Hard"
+                    android:textSize="25sp"
+                    android:textColor="@color/answerD"
+                    android:textStyle="bold"
+                    android:layout_marginStart="6dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/datetimeRecordTextView3"
+                    android:layout_marginStart="6dp"
+                    android:textSize="20sp"
+                    android:text="Date: 4/10/2016"
+                    android:layout_below="@+id/difficultyRecordTextView3"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/questionAndTimeRecordTextView3"
+                    android:text="15 Questions / 5 Minutes"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:text="Correct: 60%"
+                    android:textSize="20sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/correctRecordTextView3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
